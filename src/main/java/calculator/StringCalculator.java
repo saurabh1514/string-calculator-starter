@@ -1,5 +1,7 @@
 package calculator;
 
+import java.util.Iterator;
+
 class StringCalculator {
 
     public int add(String input) {
@@ -15,14 +17,18 @@ class StringCalculator {
     	}
     	else
     	{
-    		return getSum(num[0] , num[1]);
+    		return getSum(num);
     	}
     	
     	
     }
 
-	private int getSum(String numone,String numtwo) {
-		return Integer.parseInt(numone) + Integer.parseInt(numtwo);
+	private int getSum(String[] num) {
+		int sum=0;
+		for (int i = 0; i < num.length; i++) {
+			sum+=Integer.parseInt(num[i]);
+		}
+		return sum;
 	}
 
 	

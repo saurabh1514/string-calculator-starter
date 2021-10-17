@@ -30,6 +30,11 @@ class StringCalculatorShould {
         assertEquals(3, stringCalculator.add("1\n2"));
     }
     
+    @Test
+    void three_numbers_delimetted_sum() {     // Three numbers delimiter Returns Integer Sum of Three
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(6, stringCalculator.add("1,2,3"));
+    }
    
     
     
