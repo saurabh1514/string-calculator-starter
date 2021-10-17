@@ -23,7 +23,7 @@ class StringCalculator {
     	
     }
 
-	private int getSum(String[] num) throws Exception {
+	private int getSum(String[] num) throws Exception {   // Refractor code for sum method
 		for(String current:num)
 		{
 			if(Integer.parseInt(current) < 0)
@@ -32,8 +32,11 @@ class StringCalculator {
 			}
 		}
 		int sum=0;
-		for (int i = 0; i < num.length; i++) {
-			sum+=Integer.parseInt(num[i]);
+		for (String current:num) {
+			if(Integer.parseInt(current) > 1000) {
+				continue;
+			}
+			sum+=Integer.parseInt(current);
 		}
 		return sum;
 	}

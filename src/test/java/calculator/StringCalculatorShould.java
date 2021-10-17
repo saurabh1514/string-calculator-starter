@@ -46,7 +46,13 @@ class StringCalculatorShould {
     	 });
     	
     }
-   
+    
+    @Test
+   void ignoreNumberGreaterThan1000() throws Exception           // Number Greater Than 1000 test
+   {
+	   StringCalculator stringCalculator = new StringCalculator();
+	   assertEquals(30, stringCalculator.add("15,15,1002"));
+   }
     
     
 }
